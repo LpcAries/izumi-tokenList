@@ -2,14 +2,15 @@
   "name": "izumi-tokenList",
   "version": "1.0.0",
   "description": "Tokens used by Farming and iZiSwap by iZUMi",
-  "main": "src/compile.ts",
+  "main": "src/compileDev.ts",
   "repository": "https://github.com/izumiFinance/izumi-tokenList.git",
   "author": "MacRen000 <281130306@qq.com>",
   "license": "MIT",
   "scripts": {
-      "build": "tsc && node ./bin/compile.js > ./build/tokenList.json && node ./bin/compileDev.js > ./build/tokenListDev.json",
-      "start": "node ./bin/compile.js",
-      "dev": "ts-node ./src/compile.ts"
+      "build": "tsc && node ./bin/compileDev.js > ./build/tokenListDev.json",
+
+      "start": "node ./bin/compileDev.js",
+      "dev": "ts-node ./src/compileDev.ts"
   },
   "dependencies": {
     "@types/node": "^17.0.23",

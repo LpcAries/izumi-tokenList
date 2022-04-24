@@ -1,15 +1,16 @@
-import { TokenSymbol } from "./symbols/tokenSymbol";
-import { ChainId } from "./chainId";
+// import { TokenSymbol } from "./symbols/tokenSymbol";
+// import { ChainId } from "./chainId";
+const TokenSymbol= require("./symbols/tokenSymbol"); 
+const ChainId = require("./chainId");
+// export interface TokenInfo {
+//     chains: number[];
+//     name: string;
+//     symbol: TokenSymbol,
+//     icon: string;
+//     contracts: Partial<Record<ChainId, { address: string; decimal: number }>>;
+// }
 
-export interface TokenInfo {
-    chains: number[];
-    name: string;
-    symbol: TokenSymbol,
-    icon: string;
-    contracts: Partial<Record<ChainId, { address: string; decimal: number }>>;
-}
-
-export const tokens: TokenInfo[] = [
+export const tokens = [
     {
         name: 'iZUMi Token',
         symbol: TokenSymbol.IZI,

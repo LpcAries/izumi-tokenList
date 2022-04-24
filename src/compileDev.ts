@@ -1,5 +1,5 @@
 //import { tokens } from "./tokens/tokensDev";
-let tokens: any[] = new Array();
+let tokenlist: any[] = new Array();
 const fs = require('fs');
 const path = require('path');
 let temp: string[] = new Array();
@@ -25,9 +25,8 @@ function fileDisplay(filePath: string) {
 fileDisplay(path.join(__dirname,'../src/tokens'));
 for(let curr_path of temp){
   const curr_data = require(curr_path);
-  console.log(curr_data)
+  //console.log(curr_data[0].contracts['1337'])
   //const curr_tokens = curr_data.tokens;
-  //tokens = [...tokens,...curr_tokens];
+  tokenlist = [...tokenlist,...curr_data];
 }
-console.log(temp)
-console.log(JSON.stringify(tokens, null, '  '));
+console.log(JSON.stringify(tokenlist, null, '  '));
