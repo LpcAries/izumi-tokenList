@@ -1,3 +1,3 @@
 import { tokens } from "./tokens";
 
-console.log(JSON.stringify(tokens, null, '  '));
+console.log(JSON.stringify(tokens, null, "  "));
